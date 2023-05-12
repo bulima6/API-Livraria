@@ -14,6 +14,8 @@ function manipuladorDeErros(erro, req, res, next) {
     new ErroValidacao(erro).enviarResposta(res);
   } else if (erro instanceof NaoEncontrado) {
     erro.enviarResposta(res);
+  } else if (erro instanceof RequisicaoIncorreta) { // Adicionar esta linha
+    erro.enviarResposta(res);
   } else {
     new ErroBase().enviarResposta(res);
   }

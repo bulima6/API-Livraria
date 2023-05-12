@@ -9,8 +9,9 @@ const autorSchema = new mongoose.Schema({
   },
   nacionalidade: {type: String},
 },
-{versionKey: false}
-
+{
+  versionKey: false
+}
 );
 
 const autores = mongoose.model("autores", autorSchema);
